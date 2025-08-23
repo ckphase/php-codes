@@ -21,12 +21,15 @@ if (!file_exists($filePath)) {
     exit;
 }
 
-// run the PHP file and capture output
+// Run the PHP file and capture output
 ob_start();
 include($filePath);
 $output = ob_get_clean();
 
+// Return both raw + rendered
 echo json_encode([
-    "file" => $fileName,
-    "output" => $output
+    "file"      => $fileName,
+    "output"    => $output,                    // rendered HTML (for iframe)
+    "raw_html"  => htmlspecialchars($output),  // escaped HTML (for debugging)
+    "success"   => true
 ]);
