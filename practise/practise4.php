@@ -10,7 +10,7 @@
     echo "Store and Decimal Number and Print it";
 ?>
 <form action="" method="POST">
-    <input type="number" name="number">
+    <input type="text" name="number">
     <button type="submit" value="Submit" aria-placeholder="Submit" name="submit">Submit</button>
 </form>
 <?php 
@@ -18,7 +18,11 @@
     $number = $_POST['number'];
     $float_number = (float)$number;
     echo "<br>";
-    echo $float_number;
+    echo "Value: " . $float_number;
+    echo "<br>";
+    echo "Datatype: " . gettype($float_number);
+    echo "<br>";
+    printf("Customised decimal number: %.$ff", $float_number);
     }
 ?>
 </body>
