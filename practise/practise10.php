@@ -23,7 +23,12 @@
         $number = $_POST['number'];
         $num1 = (int)$num1;
         $number = (int)$number;
-        $result = $num1 / $number;
-        echo $result;
+        if($number == 0){
+            echo "Division by zero is not allowed.";
+            exit;
+        }else{
+            $result = $num1 / $number;
+            echo $result;
+        }
     }
     ?>
