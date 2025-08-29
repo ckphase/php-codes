@@ -1,12 +1,20 @@
 <?php 
-echo "Write a PHP program to check weather a number is an Armstrong number or not. Return true if the number is Armstrong number otherwise return.<br>";
-echo "Note: An armstrong number in three digits us an integer so that the sum of the cubes of its digits is equal to the number itself.";
-$number = "153";
-$array12[] = [1,"5","3"];
+// echo "Write a PHP program to check whether a number is an Armstrong number or not. Return true if the number is Armstrong number otherwise return false.<br>";
+// echo "Note: An Armstrong number in three digits is an integer such that the sum of the cubes of its digits is equal to the number itself.<br><br>";
 
-for($i=0; $i<=3; $i++){
-   $cube_value = $array12[i] * $array12[i] * $array12[i];
-   $cube_value = $total;
+$number = "153"; 
+$array12 = str_split($number); // split into array of digits
+$total = 0;
+
+// loop through each digit
+for($i = 0; $i < count($array12); $i++){
+   $digit = (int)$array12[$i];       // convert to integer
+   $total += $digit * $digit * $digit; // cube and add
 }
-echo $total;
+
+if ($number == $total) {
+    echo "$number is an Armstrong number.";
+} else {
+    echo "$number is not an Armstrong number.";
+}
 ?>

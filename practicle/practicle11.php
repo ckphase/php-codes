@@ -1,13 +1,20 @@
 <?php
-echo "Write a PHP program to compute the sum of all the prime numbers till 100";
-$num = 1;
 $prime_sum = 0;
-for($i = 2; $i <= 100; $i++){
-    if ($num % $i != 0){
-        $prime_sum = $num + $prime_sum;
-        echo "$prime_sum<br>";
+
+for ($i = 2; $i <= 100; $i++) {
+    $isPrime = true;
+
+    for ($j = 2; $j < $i; $j++) {
+        if ($i % $j == 0) {
+            $isPrime = false;
+            break;
+        }
     }
-    $num++;
+
+    if ($isPrime) {
+        $prime_sum += $i;
+    }
 }
-echo "<br>$prime_sum";
+
+echo "Sum of all prime numbers till 100 = $prime_sum";
 ?>

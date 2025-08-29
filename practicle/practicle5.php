@@ -9,23 +9,23 @@
     <?php 
     $total = "25 students";
     $more = "10";
-    $total = $total + $more; 
+    $total += $more; 
     echo "<p>Total number of students: $total</p>";
 
     $total = "25students";
     $more = "10";
     $total = $total + $more; 
-    echo "<p>Total number of students: $total</p>";
+    echo "<p>Without space: $total</p>";
 
-    $total = "255 students";
-    $more = "10";
-    $total = $total + $more; 
-    echo "<p>Total number of students: $total</p>";
+    // $total = "255 students";
+    // $more = "10";
+    // $total = $total + $more; 
+    // echo "<p>Total number of students: $total</p>";
         
     $total = "students 25";
     $more = "10";
     $total = $total + $more; 
-    echo "<p>Total number of students: $total</p>";
+    echo "<p>Total number first string: $total</p>";
     ?>
 </body>
 </html>
